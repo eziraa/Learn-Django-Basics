@@ -30,6 +30,11 @@ def say_hello(request):
     return render(request, 'index.html')
 ```
 
+### Let me explain parameters of `render` function
+
+1. `request` parameter represent the reqeust to be handled
+2. `template file ` to indicate the html file to be returned 
+3. `context` this is a dictionary `({})` which contains information to be sent to front end
 - Then when we browse with url `http://127.0.0.1:8000/playground/`
 
 - We will get the following
