@@ -40,7 +40,7 @@ class Product(models.Model):
     last_update = models.DateTimeField(auto_now = True)
 ```
 
-___Let me explain the parameter of the field types
+___Let me explain the parameter of the field types___
 
 1. _CharField_
     
@@ -78,3 +78,18 @@ _Let me explain some parameters in the above models_
 
     - `unique` = `True` the field should be unique no two or more instance of the model to have the field value (means the same email in our current condition)
     - `null` = `True` the field can be null so we can (not providing value to this field)
+
+- When create model in djnago we don't have to create `id` for our models django add to the model when we create the model
+- And it make it primary key 
+- But we can also set our primary key manually when we create the model 
+
+___Let us update the Customer model to set the email primary key___
+
+```Python
+class Customer(models.Model):
+    first_name = models.CharField(max_length =255)
+    last_name = models.CharField(max_length = 255)
+    email = models.EmailField(unique = True, primary_key = True)
+    phone_number = models.Charfield(max_length)
+    birth_date = models.DateField(null = True)
+```
