@@ -59,3 +59,4 @@ urlpatterns = [
 ___Remember___ 
 - 
 - Only  Update not write other `urlpatterns` list
+- After this time unless we change this linking all requests which start with `'playground/'` go to playground view
