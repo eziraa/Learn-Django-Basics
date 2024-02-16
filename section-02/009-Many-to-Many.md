@@ -41,3 +41,39 @@ class CartItem(models.Model):
     cart = models.ForeignKey(Cart, on_delete=models.CASCADE)
     quantity = models.PositiveSmallIntegerField()
 ```
+
+- We call the above relationships as indirect `many-to-many` relationship
+
+- There a true many-to-many relationship
+
+___Exmple___
+
+    - this is between Product and Promotion models
+    - A product will have diffent promotion and
+    - A promotion will include defferent products
+___Let us implement it___
+
+- First create Promotion model
+
+```python
+
+# create Promotion model
+class Promotion(models.Model):
+    description = models.CharField(max_length=255)
+    discount = models.FloatField()
+```
+- Then add the relationship
+
+```python
+
+# create Promotion model
+class Promotion(models.Model):
+    description = models.CharField(max_length=255)
+    discount = models.FloatField()
+    products = models.ManyToManyField(Product, related_name='promotions')
+```
+
+- After we create this relationship django create the reverse relationship and it will create a field called `promotions` which we gave in the paramater called `related_name`  in the above relation
+
+- But if we did not give  related name then it automatically create field named `product_set`
+- Then we can access promotions for particular product like (product.promotions or product.promotion_set)
