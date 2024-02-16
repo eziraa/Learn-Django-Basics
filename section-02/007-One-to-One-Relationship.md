@@ -20,3 +20,22 @@ ___Remember___
     
     don't be confused with `class` and `model`
     because both are almost the same
+
+___Let us modify the Address model to add the relation ship___
+
+```python
+class Address(models.Model):
+    street = models.CharField(max_length = 255)
+    city = models.CharField(max_length = 255)
+    customer = models.OneToOneField(Customer, on_delete = models>CASCADE)
+```
+
+- When we create the relationship  we pass to argument
+    - 1st argument is to indicate the paretn class
+    - 2nd argument is `on_delete` specify what should going on the child model when the parent model deleted
+    - `on_delete` has the following value
+
+        - models.CASCADE -> delete it
+        - models.SET_NULL -> set null 
+        - models.SET_DEFAULT -> set its default value
+        - models.PROTECT -> raise Exception to do not delete the parent
