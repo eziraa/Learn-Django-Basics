@@ -42,4 +42,17 @@ ___There are three types of model relation ship___
         __Example__
 
             A collection will contain different products and a product will be in many defferent collections
+
+- Models will have different Attributes
+
+__Exmaple__
     
+    Product Model Will have the following attributes
+    - title
+    - description
+    - price 
+    - inventory
+
+    Collection Will Have the following attributes
+    - title
+    - featured_product
