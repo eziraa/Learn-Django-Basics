@@ -18,7 +18,28 @@ class Customer(models.Model):
     first_name = models.CharField(max_length =255)
     last_name = models.CharField(max_length = 255)
     email = models.EmailField(unique = True, primary_key = True)
-    phone_number = models.Charfield(max_length)
+    phone_number = models.Charfield(max_length = 255)
     birth_date = models.DateField(null = True)
     membership = models.CharField(max_length = 1, choices = MEMBESHIP_CHOICES)
+```
+
+___Let us to reduce error if we update this late we can add the membership choices as follows___
+
+```Python
+class Customer(models.Model):
+
+    MEMBERSHIP_BRONZE = 'B'
+    MEMBERSHIP_SILVER = 'S'
+    MEMBERSHIP_GOLD = 'G'
+    MEMBESHIP_CHOICES = [
+        (MEMBERSHIP_BRONZE, 'Bronze')
+        (MEMBERSHIP_SILVER, 'Silver')
+        (MEMBERSHIP_GOLD, 'Gold')
+    ]
+    first_name = models.CharField(max_length =255)
+    last_name = models.CharField(max_length = 255)
+    email = models.EmailField(unique = True, primary_key = True)
+    phone_number = models.Charfield(max_length = 255)
+    birth_date = models.DateField(null = True)
+    membership = models.CharField(max_length = 1, choices = MEMBESHIP_CHOICES, default = MEMBERSHIP_BRONZE)
 ```
