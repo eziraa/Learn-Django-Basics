@@ -43,3 +43,22 @@ class Customer(models.Model):
     birth_date = models.DateField(null = True)
     membership = models.CharField(max_length = 1, choices = MEMBESHIP_CHOICES, default = MEMBERSHIP_BRONZE)
 ```
+
+___Let us create other model called Order with attribute placed_at (auto_populated) and pyment_status(pending , complete, failed)___
+
+```python
+
+class Order (models.Model):
+    PAYMENT_COMPLETE = 'C'
+    PAYMENT_PENDING = 'P'
+    PAYMENT_FAILED = 'F'
+    PAYMENT_CHOICES = [
+        (PAYMENT_COMPLETE , 'Cmplteted'),
+        (PAYMENT_PENDING, 'Pending'),
+        (PAYMENT_FAILED, 'Failed')
+    ]
+    placed_at = models.DateTimeField(auto_now_add = True)
+    payment_status = models.CharField(max_length = 1, choices = PAYMENT_CHOICES)
+```
+
+    
