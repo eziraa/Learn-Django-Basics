@@ -62,3 +62,14 @@ ___Let me explain the parameter of the field types
     - We can set `auto_new` parameter to set its value to the current time and data when it update
     - And we can also set `auto_new_add` parameter to set its value to the current time and data when it is created for first time
 
+___Let us create Customer model___
+
+```python
+class Customer(models.Model):
+    first_name = models.CharField(max_length=255)
+    last_name = models.CharField(max_length=255)
+    email = models.EmailField(unique=True)
+    phone_number = models.CharField(max_length=255)
+    birth_date = models.DateField( null=True)
+
+```
