@@ -12,6 +12,8 @@
 
 ___There are three types of model relation ship___
 
+![Relationship](../Images/relation%20ship.png)
+
 1. ___One To One Relationship___
 
     - This relationship indicates that an instance of a model will relate only one instance of the other model
