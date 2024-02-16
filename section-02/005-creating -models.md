@@ -73,3 +73,8 @@ class Customer(models.Model):
     birth_date = models.DateField( null=True)
 
 ```
+
+_Let me explain some parameters in the above models_
+
+    - `unique` = `True` the field should be unique no two or more instance of the model to have the field value (means the same email in our current condition)
+    - `null` = `True` the field can be null so we can (not providing value to this field)
