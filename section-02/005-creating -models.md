@@ -8,7 +8,7 @@ from django.db import models
 # Create your models here.
 
 class Product(models.Model):
-    title = models.CharField(max_length)
+    title = models.CharField(max_length = 255)
 
 ```
 ___Explanation___
@@ -33,7 +33,7 @@ ___Let us update the above Product Model By adding more fields___
 from django.db import models
 
 class Product(models.Model):
-    title = models.CharField(max_length)
+    title = models.CharField(max_length == 255)
     description = models.TextField()
     price = models.DecimalField(max_digits = 6 , decimal_places = 2)
     inventory = models.IntegerField()
@@ -58,5 +58,7 @@ ___Let me explain the parameter of the field types
             ___exampl___
 
                 - decimal_places = 2 means 234.45 or 34525.57 or 454095.00
-
+3. _DateTimeField_
+    - We can set `auto_new` parameter to set its value to the current time and data when it update
+    - And we can also set `auto_new_add` parameter to set its value to the current time and data when it is created for first time
 
