@@ -12,7 +12,7 @@
 
 ___There are three types of model relation ship___
 
-1. __One To One Relationship__
+1. ___One To One Relationship___
 
     - This relationship indicates that an instance of a model will relate only one instance of the other model
 
@@ -23,7 +23,7 @@ ___There are three types of model relation ship___
         - A User will has only one telegram account through one phone number
 
         - And One telegram account will be managed by one telegram user only
-    2. __One to Many Relationship__
+    2. ___One to Many Relationship___
         - One to many relationship is when the instance of a model in relate to many instance of other model
 
         __Example__
@@ -33,3 +33,13 @@ ___There are three types of model relation ship___
             These two model relates in one to many relationship 
 
             A customer will have many orders but an order can be ordered by one customer
+    
+    3. ___Many to Many Relationship___
+
+        - This type of relationship is when one instance of a model related to many instance of other model
+        - And the reverse is `True`
+
+        __Example__
+
+            A collection will contain different products and a product will be in many defferent collections
+    
