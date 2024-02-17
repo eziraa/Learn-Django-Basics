@@ -18,5 +18,16 @@ ___Example___
 - use passward you used in installing MySQL
 - If you change the username also use that username
 - write your database you used in this project
-
+- If you get missing driver error then download automatically (nice feature of DataGrip)
+- Test connection
+- if you get error like server returns invalid timezone
+- The click `settimzone` and set the timezone to `UTC`
+- Then test again
 ![Fill neccessary info](../Images/fill-neccessary.png)
+
+- Then you can open console by right click on the server name them click open new console
+- Then you can do any thing like
+    - _create database_
+    - _create table_
+    - _insert data_
+    - _query data_
