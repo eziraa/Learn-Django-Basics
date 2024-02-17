@@ -67,3 +67,39 @@ to display list of product objects
 </body>
 </html>
 ```
+
+### Explaining the above code
+
+- This is simple html file rathe than there are some additional things which is empedding python code in html file
+- if you want to emped expression use the following command
+
+```html
+{{ expression }}
+
+```
+
+_Example_
+
+```html
+{{name}}
+```
+- if you want to emped conditional statment like for loop or if use the following and close it
+- To close for loop use endfor
+- To close if use endif
+
+```html
+{% for something in somethings %}
+<!-- html code here -->
+{% endfor %}
+
+```
+
+_Example_
+
+```html
+{% for product in products %}
+
+<h2> {{product}} </h2>
+
+{% endfor %}
+```
