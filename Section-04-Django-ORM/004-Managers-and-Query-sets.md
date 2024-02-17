@@ -27,3 +27,23 @@ def index(request):
 ```
 - Variable querSet store a set of query retrived from the database table 
 
+- Let us send the query set to the template file as context
+- To send let us cast to list for simplicity
+- To cast to list simply wrap with keyword `list`
+- Then add to the context mapping object as `products`
+
+__let us modify the above method__
+
+```python
+from django.shortcuts import render
+from django.http import HttpResponse
+from store.models import Product
+
+def index(request):
+    # accessing the product objects through queryset
+    querySet = Product.objects.all()
+    # Casting querySet to list
+    querySetList = list(querySet)
+    return render(request, 'index.html', {'name': 'Ezira',
+    'products':querySetList })
+```
