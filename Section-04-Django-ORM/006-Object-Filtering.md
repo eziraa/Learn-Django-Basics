@@ -50,3 +50,15 @@ then arg is `title__startswith = 'e'`
 order = Order.objects.filte(customer_id = 2)
 
 ```
+
+___More look ups___
+
+- _exact_ -> to retrun the somethind exact equal to its value
+
+    _Example_
+
+    ```python
+     order = Order.objects.filter(title__exact = 'order1')
+     ```
+- _iexact_ -> it is the same to the above lookup but it is case insensetive
+
