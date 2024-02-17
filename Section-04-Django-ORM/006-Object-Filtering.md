@@ -43,3 +43,10 @@ _Example_
 
 then arg is `title__startswith = 'e'`
 
+- But there is an exception for the above format for foreignkey id use one underscore as folows
+
+```python
+
+order = Order.objects.filte(customer_id = 2)
+
+```
