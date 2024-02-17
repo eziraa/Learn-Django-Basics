@@ -30,4 +30,16 @@ ___Key word argumnet trick for number related___
     3. _Concatinate `__gte` for greater than or equal to_
     4. _Concatinate `__lte` for less than or equal to_
 
-    
+___Key word argumnet trick for all field type___
+
+- Filter method takes arbitrary number of keyword args
+- The format of those  keyword args is as folloes
+
+    - field name__lookuptypes = value
+
+_Example_
+- field name = title
+- look up type = startswith
+
+then arg is `title__startswith = 'e'`
+
