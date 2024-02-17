@@ -103,3 +103,19 @@ _Example_
 
 {% endfor %}
 ```
+
+- if you run your server and navigate to url (127.0.0.1:8000/playground) you will get as follows
+
+![empedding](../Images/embed.png)
+
+- As we see in the picture it is simply list of product object so we have to use its attribute rather display product object for readbility
+
+- Modify the content of the for loop in the template as follows
+
+```html
+<h2> {{product.title}} </h2>
+```
+
+- Then you will get as follows
+
+![Corredcted embed](../Images/correctd%20emped.png)
