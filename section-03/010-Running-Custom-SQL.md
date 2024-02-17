@@ -50,5 +50,10 @@ class Migration(migrations.Migration):
     ]
 ```
 
-- Then migrate it
-- it will insert new data int collection model 
+- _Then migrate it_
+- _it will insert new data into collection model_
+- _The first parameter is to insert some value to the database table_ 
+- _The second paramter is to reverse the operation when make the migration unapplied_
+
+___Remember___
+- _If want to revert the migration leter then you have to give both argument_ 
