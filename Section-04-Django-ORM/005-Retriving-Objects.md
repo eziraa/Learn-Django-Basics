@@ -43,3 +43,19 @@ def index(request):
         'name': 'Ezira',
         'products': list([product])})
 ```
+
+- But if you do not want to write `try`  block you can use `filter` mothed plus `first` method
+
+- filter method return queryset by filtering objects by based on giving condition and first method return the first object from the query set
+
+- So you can modify as follows
+
+```python
+def index(request):
+    product = Product.objects.filter(pk=0).first()
+    return render(request, 'index.html', {
+        'name': 'Ezira',
+         'products': list([product])})
+
+```
+- if there is no object to be retruned it will return `None` rather raising exception
