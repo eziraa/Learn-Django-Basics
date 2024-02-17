@@ -10,13 +10,14 @@ ___Example___
 productQuerySet = Product.objects.all()
 ```
 - To retrive an object you can use `get`method
+- When we use `get` it return the actual object not query set
 
 ```python
-productQuerySet = Product.objects.get(id = 1)
+product = Product.objects.get(id = 1)
 ```
 - You can also use `pk` instead of `id` to indicate primary key of the table
 - When we use pk in django transform pk to the name of the primary key
 
 ```python
-productQuerySet = Product.objects.get(pk = 1)
+product = Product.objects.get(pk = 1)
 ```
