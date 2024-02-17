@@ -57,3 +57,13 @@ class Migration(migrations.Migration):
 
 ___Remember___
 - _If want to revert the migration leter then you have to give both argument_ 
+
+- The following are valid sql code writng
+
+```python
+operations = [
+migrations.RunSQL("INSERT INTO store_order (title) VALUES ('Collection1');")
+migrations.RunSQL([("INSERT INTO musician (title) VALUES ('Collection2');", None)])
+migrations.RunSQL([("INSERT INTO musician (title) VALUES (%s);", ['Collection3'])])
+]
+```
