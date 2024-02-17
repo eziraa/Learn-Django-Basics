@@ -16,3 +16,22 @@
 ___Command Trick___
     
     To find come symbol like(Product, Customer, Order ...) you can use `CTRL + T` and type your symbol
+
+- You can modify some model and make new migration 
+- Let us rename `price` to `unit_price` in `Product` model
+
+```python
+    price = models.DecimalField(max_digits=6, decimal_places=2)
+```
+- Then rerun the above command
+
+```bash
+ python manage.py makemigrations
+```
+
+- You will get new migration file in store app inside migrations folder
+- And if you want to rename the migration file name fell free you can but if you modify the content of the migration file it will have effect on the database so be sure to modify correctly its content
+
+
+
+
