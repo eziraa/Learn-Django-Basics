@@ -22,3 +22,10 @@ mysql -u root -p
 - You will get unapplied migrations
 
 ![Unapplied migraions](../Images/unapplied%20migrations.png)
+
+- Then migrate them
+
+```bash
+python manage.py migrate
+```
+
