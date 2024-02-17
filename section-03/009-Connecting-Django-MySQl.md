@@ -17,3 +17,8 @@ mysql -u root -p
 - Then go to the cofiguration file(setting.py) adn change the default database as follows 
 - Enter your own database name, username, password, database engines(mysql if you want to use mysql)
 ![Change default database](../Images/change%20database.png)
+
+
+- You will get unapplied migrations
+
+![Unapplied migraions](../Images/unapplied%20migrations.png)
