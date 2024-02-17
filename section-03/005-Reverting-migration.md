@@ -16,3 +16,11 @@ ___Remeber___
 
 - So if you want te clear the reverted migration we have to do it manually and remove the code change from models
 
+- But the efficient way by using version control system
+- If you are using VCS then you can revert the last commit through command
+
+```bash
+git reset --hard HEAD~1
+```
+
+- After you run this command git remove last commit from commit stack and remove the change of the last commit
