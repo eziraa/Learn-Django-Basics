@@ -1,4 +1,4 @@
-## Djnngo ORM
+## Django ORM
 
 - Data in Relational Database stored in the form of table
 - To insert data to the database table or to get extract data from the database table we use SQL statment
