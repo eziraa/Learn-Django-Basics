@@ -28,3 +28,20 @@ _1. Reduce complexity_
 _2. Make our code more understandable_
 
 _3. get more done in less time(less code more job less time)_
+
+___Example___
+
+- Let us see how migration work
+- First we write python class called `model`
+- Then we make migration
+- Finally we apply the migration
+- When we apply the migrations it execute the equivalent SQL code of the migration on the database
+- It will do like
+    1. _create database_
+    2. _create table_
+    3. _drop database_
+    4. _drop table_
+    5. _insert data_
+    6. _query SQL query_
+    7. _delete some instance_
+    8. _update table_
