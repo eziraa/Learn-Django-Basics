@@ -21,3 +21,25 @@ product = Product.objects.get(id = 1)
 ```python
 product = Product.objects.get(pk = 1)
 ```
+
+___Remember___
+- What if we give an id which does not exist
+
+- It will raise object does not exist exception
+- To fix this import ObjectDoesNotExist exception and write it with `try` block as follows
+
+```python
+from django.shortcuts import render
+from django.http import HttpResponse
+from store.models import Product
+from django.core.exceptions import ObjectDoesNotExist
+
+def index(request):
+    try:
+        product = Product.objects.get(pk=0)
+    except ObjectDoesNotExist:
+        return HttpResponse("<h1> Object does not exist </h1")
+    return render(request, 'index.html', {
+        'name': 'Ezira',
+        'products': list([product])})
+```
