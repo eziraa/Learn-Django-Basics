@@ -16,3 +16,10 @@ python manage.py migrate
 - Then it will be added in your explorer in the left side below your main project
 
 - Then you see the table by right click on the table and click show table
+
+- You can see SQL format of your migration
+- Let us see SQL format of the 2nd migration in store app 
+
+```bash
+python manage.py sqlmigrate store 0002
+```
