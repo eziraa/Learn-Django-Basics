@@ -59,3 +59,13 @@ def index(request):
 
 ```
 - if there is no object to be retruned it will return `None` rather raising exception
+
+- We can also check weather it found or not by usnig `exsts` method instead of `first` method
+
+- Let us modify it as follows
+```python
+
+def index(request):
+    exists = Product.objects.filter(pk=0).exists()
+```
+- But it will return `True` or `False` instead of the Product
