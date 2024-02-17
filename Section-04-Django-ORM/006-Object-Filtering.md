@@ -62,3 +62,14 @@ ___More look ups___
      ```
 - _iexact_ -> it is the same to the above lookup but it is case insensetive
 
+- _contains_ -> to check the value containe some value
+
+    _Example_
+
+    
+    ```python
+     order = Order.objects.filter(title__contains = 'order')
+     ```
+
+- _icontains_ -> this is the same as `contains` method but this is case insensetive
+
