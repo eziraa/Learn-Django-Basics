@@ -20,3 +20,11 @@ select * from store_product
 ```
 
 - ORM provide eficient code for complex query
+
+___Importance of ORM___
+
+_1. Reduce complexity_
+
+_2. Make our code more understandable_
+
+_3. get more done in less time(less code more job less time)_
