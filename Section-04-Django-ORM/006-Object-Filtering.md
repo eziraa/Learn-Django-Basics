@@ -21,3 +21,13 @@ ___Exmaple___
     ```
 
     - a keyword argument unit_pricee__gt means unit_price > 20
+
+___Key word argumnet trick for number related___
+
+- _Let the field name is unit_price then_
+    1. _Concatinate `__gt` for greater than_
+    2. _Concatinate `__lt` for less than_
+    3. _Concatinate `__gte` for greater than or equal to_
+    4. _Concatinate `__lte` for less than or equal to_
+
+    
