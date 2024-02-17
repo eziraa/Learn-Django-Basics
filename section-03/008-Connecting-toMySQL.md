@@ -13,3 +13,10 @@ ___Example___
 - The connect to mysql server as follows
 
 ![Mysql Connecting](../Images/mysql.png)
+
+- Then fill info as you install mysql
+- use passward you used in installing MySQL
+- If you change the username also use that username
+- write your database you used in this project
+
+![Fill neccessary info](../Images/fill-neccessary.png)
