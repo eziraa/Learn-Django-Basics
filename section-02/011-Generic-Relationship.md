@@ -42,3 +42,28 @@ class TaggeItem(models.Model):
     object_id = models.PositiveSmallIntegerField()
     content_object = GenericForeignKey()
 ```
+
+___Let us add othe generic relationship for what user likes what object___
+
+- To add this relationship first create `likes` app
+
+```bash
+python manage.py startapp likes
+```
+
+- Then import built in `User` model and make the realionship through LikedItem model
+
+```python
+from django.contrib.auth.models import User
+from django.contrib.contenttypes.models import ContentType
+from django.contrib.contenttypes.fields import GenericForeignKey
+# create LikedItem model to represent what user likes what product
+
+
+class LikedItem(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE)
+    object_id = models.PositiveSmallIntegerField()
+    content_object = GenericForeignKey()
+```
+
