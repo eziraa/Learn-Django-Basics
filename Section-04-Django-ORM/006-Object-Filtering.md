@@ -73,3 +73,10 @@ ___More look ups___
 
 - _icontains_ -> this is the same as `contains` method but this is case insensetive
 
+- _startswith_ -> to check the object field contains the value
+- _istartswith_ -> The same to above but it is case insensetiva
+
+- _endswith_ -> to check wether the field of the object end with the value_
+
+- _iendswith_ -> This is the same to endswith lookup but it is case insensetive
+
