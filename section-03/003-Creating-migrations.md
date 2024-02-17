@@ -9,4 +9,10 @@
 ```bash
  python manage.py makemigrations
 ```
+ ___Remember___
+ 
+ - This command ceate migration only for apps that are found in `INSTALLE_APPS` list so ___do not forget to add your apps to this list___
 
+___Command Trick___
+    
+    To find come symbol like(Product, Customer, Order ...) you can use `CTRL + T` and type your symbol
