@@ -47,3 +47,23 @@ def index(request):
     return render(request, 'index.html', {'name': 'Ezira',
     'products':querySetList })
 ```
+
+- Then let us modify the template file `index.html`
+to display list of product objects
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+<body>
+    <h1>Hello {{name}}</h1>
+    {% for product in products%}
+    <h2>{{product}}</h2>
+    {% endfor %}
+</body>
+</html>
+```
