@@ -5,3 +5,10 @@
 - If we want access other than the provided fields we got no thing
 - We can use `only` method to do this
 - In this method first it return instances with the provided fields only then when we try to access other than those fields it will send other query to the database
+
+___Example___
+```python
+products = Product.objects.only('id', 'title')
+```
+- First it  return an instance with field value id and title then If we try to access 'unit_price' it will query to the database to get the unit price
+- This not optimazation be carefull bacause if your first query contain 1000000 instance then it will query to the database 1000000 times 
