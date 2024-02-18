@@ -38,3 +38,25 @@ collection.featured_product_id = 1
 collection.save()
 
 ```
+
+___Method 3___
+
+- This is the simplest and finest way
+
+```python
+
+collection = Collection.objects.create(title = 'Video Games', featured_product = Product(id = 1))
+
+# OR use pk instead of id 
+collection = Collection.objects.create(title = 'Video Games', featured_product = Product(pk = 1))
+
+# OR use featured_product_id instead of featured_product
+
+collection = Collection.objects.create(title = 'Video Games', featured_product_id = 1)
+
+# Then save is
+
+collection.save()
+
+```
+
