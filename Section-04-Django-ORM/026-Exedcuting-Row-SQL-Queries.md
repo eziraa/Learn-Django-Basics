@@ -9,3 +9,17 @@ ___Example___
 ```python
 queryset = Product.objects.raw('SELECT * FROM store_product')
 ```
+
+___Method 2___
+
+- We can execute any type of SQL Query by creating cursor object as follows
+
+```python
+
+from django.db import connection
+cursor = connection.cursor()
+cursor.execute('SELECT * FROM store_product')
+queryset = cursor.fetchall()
+cursor.close()
+
+```
