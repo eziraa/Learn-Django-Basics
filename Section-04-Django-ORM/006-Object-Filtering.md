@@ -115,4 +115,16 @@ ___Let us see when query evaluated___
     _Remember_
     - Even if Slicing unevaluated queryset return unevaluted Queryset filtering further is not allowed 
 
+3. Pickling/Caching.
+    - if we pickle a queryset then all results to be evaluated and loaded to memory before pickling
+4. repr()
+    - If we call `repr` function on it the queryset evaluated
+
+5. len()
+    - If we want to know length of the queryset and we call len() method then the queryset evaluated
+6. bool()
+    - Testing a QuerySet in a boolean context, such as using bool(), or, and or an if statement, will cause the query to be executed.
+7. list
+    if we cast queryset to list then the query set evaluated
+    
 
