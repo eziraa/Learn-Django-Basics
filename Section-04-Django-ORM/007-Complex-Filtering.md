@@ -30,3 +30,14 @@ q = products.objects.filter(Q(unit_price__gt = 30) | Q(unit_price__lt = 10))
 
 # This return products whose unit_price is greate than 30 and less than 20
 ```
+
+- We can negate Q objects by appending before it symbol (`~`)
+
+___Example___
+
+```python 
+from django.db.models import Q
+products = Product.objects.filter(~Q(unit_price__lt = 20))
+
+# return products whose unit price is not less than 20
+```
