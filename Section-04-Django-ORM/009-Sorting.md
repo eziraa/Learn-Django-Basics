@@ -42,17 +42,17 @@ product = Product.objects.order_by('title')[0]
 
 ```
 
-- And we can also use `earliest` method insteed of slicing
+- And we can also use `earliest` method insteed of slicing and order by
 
 ```python
-product = Product.objects.order_by('title').earliest()
+product = Product.objects.earliest('title')
 
 # This also return a single object
 ```
 - We can also use latest method to return the last object
 
 ```python
-product = Product.objects.order_by('title').latest()
+product = Product.objects.latest('title')
 # This also return a single object
 ```
 
