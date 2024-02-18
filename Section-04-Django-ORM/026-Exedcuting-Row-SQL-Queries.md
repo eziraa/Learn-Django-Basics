@@ -43,3 +43,13 @@ finally:
 
 ```
 
+ - Rather than closing the cursor object manually the efficient way is to use is with `with` block 
+
+```python
+
+
+from django.db import connection
+with connection.cursor() as cursor:
+    cursor.execute('SELECT * FROM store_product')
+    queryset = cursor.fetchall()
+```
