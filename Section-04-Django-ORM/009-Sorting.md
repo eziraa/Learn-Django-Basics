@@ -32,3 +32,28 @@ reversed_products = Product.objects.order_by('title').reverse()
 
 # it will return reversed order of products
 ```
+- Order by metho return a query set so  we can chain  others method on it
+- for example how to get the first product after ordered by thier title
+
+```python
+product = Product.objects.order_by('title')[0]
+
+# we get single object because we used slicing 
+
+```
+
+- And we can also use `earliest` method insteed of slicing
+
+```python
+product = Product.objects.order_by('title').earliest()
+
+# This also return a single object
+```
+- We can also use latest method to return the last object
+
+```python
+product = Product.objects.order_by('title').latest()
+# This also return a single object
+```
+
+
