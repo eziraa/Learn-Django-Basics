@@ -9,7 +9,7 @@ ___Deleting one object by creating object___
 collection = Collection(pk = 1)
 collection.delete()
 ```
-___Deleting one or more object by using `filter` method
+___Deleting one or more object by using `filter` method___
 
 - We can delete multiple objects by using `filter`  and `delete` method
 

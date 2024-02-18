@@ -29,7 +29,7 @@ ___Parameter List___
 - 3rd Parameter is the `name` of the mapping
 
 _Remeber_ 
-- Make sure you spelt out `urlpatterns` because django see this list to handle requests and it shouls be all lower case letter
+- Make sure you spelt out `urlpatterns` because django see this list to handle requests and it should be all lower case letter
 
 But it is not enough to handle request only writing this mapping we have to write  a mapping from our main project to this app we see this as forwarding to this app
 
@@ -59,4 +59,4 @@ urlpatterns = [
 ___Remember___ 
 - 
 - Only  Update not write other `urlpatterns` list
-- After this time unless we change this linking all requests which start with `'playground/'` go to playground view
+- After this time unless we change this linking all requests which start with `'playground/'` go to playground urls
