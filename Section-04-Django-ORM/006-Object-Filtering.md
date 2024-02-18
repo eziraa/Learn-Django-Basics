@@ -80,3 +80,21 @@ ___More look ups___
 
 - _iendswith_ -> This is the same to endswith lookup but it is case insensetive
 
+
+___Remember___
+
+- When we filter, execute, sort, group query set is not evaluated simply i constucts an other query 
+
+_Example_
+
+```python 
+q1 = Products.objects.all()
+q2 = q1.filter(unit_price__gte = 20)
+q3 = q2.filter(unit_price__gte = 30)
+print(q3)
+```
+
+- As we see in the above we will think the queryset hit the database three times.
+- But we are wrong because a queryset hit the database when it is evaluated
+- So it hit the database when it reaches to print method
+
