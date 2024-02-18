@@ -43,4 +43,32 @@ class Product(models.Model):
         return self.title
 ```
 
+___Exercise___
 
+- Change string representation of all registed models
+
+- By Default objects are stored and retrived in the order of they have been created
+
+- But we can this ordering by adding `Meta` class inside it 
+
+___Let us Meta class to Product model___
+
+```python
+class Product(models.Model):
+    title = models.CharField(max_length=255)
+    description = models.TextField()
+    slug = models.SlugField(default='-')
+    unit_price = models.DecimalField(max_digits=6, decimal_places=2)
+    inventory = models.IntegerField()
+    last_update = models.DateTimeField(auto_now=True)
+    collection = models.ForeignKey(Collection, on_delete=models.PROTECT)
+    promotions = models.ManyToManyField(Promotion, related_name='products')
+
+    # simply add this method
+    def __str__(self):
+        return self.title
+    
+    class Meta:
+        ordering = ['title']
+```
+- After this they will be ordered by their title
