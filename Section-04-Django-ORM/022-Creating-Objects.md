@@ -19,3 +19,22 @@ collection = Collection(title = 'Video Games', featured_product_id = 1)
 # Then save
 collection.save() # this is equivalent to INSERT INTO
 ```
+
+___Method 2___
+
+```python
+
+collection = Collection()
+collection.title = 'Video Games'
+collection.featured_product = Product(id = 1)
+
+# OR use pk instead if id
+collection.featured_product = Product(pk = 1)
+
+# OR use featured_product_id instead of featured_product
+collection.featured_product_id = 1
+
+# Then save it
+collection.save()
+
+```
