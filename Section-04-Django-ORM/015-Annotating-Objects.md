@@ -18,3 +18,9 @@ products = Product.objects.annotate(is_new = True)
     - _F_ -> for field of the model
     - _Func_ -> to call database function
     - Aggregate -> for Sum, Count, Min, Max, Avg
+
+___Let us modify the above code as follows by wrapping the value with `Value` class___
+
+```python
+products = Product.objects.annotate(is_new = Value(True))
+
