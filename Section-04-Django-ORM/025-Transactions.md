@@ -45,3 +45,25 @@ def index(request):
 
 ```
 - We can write as above the decorator if all of code needs to be under transaction
+
+- But if there are some code needs not to be under transaction we can use `with` as context manger
+
+___Example___
+
+```python
+def index(request):
+    # some code outside the transaction
+    with transaction.atomic():
+        order = Order()
+        order.customer_id = 1
+        order.save()
+
+        item = OrderItem()
+        item,order = order
+        item.product_id = 1
+        item.quantity = 3
+        item.unit_price = 23
+        item.save()
+
+```
+
