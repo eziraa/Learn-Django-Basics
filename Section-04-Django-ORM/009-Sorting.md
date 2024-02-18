@@ -24,3 +24,11 @@ products = Product.objects.order_by('unit_price', '-inventory')
 
 # It sort the query set by their unit price then by inventory
 ```
+
+- We can also call method called `reverse`  on ordering then it will reverse the ordering
+
+```python 
+reversed_products = Product.objects.order_by('title').reverse()
+
+# it will return reversed order of products
+```
