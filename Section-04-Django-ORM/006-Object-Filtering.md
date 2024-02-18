@@ -103,5 +103,16 @@ print(q3)
 - There lazy means they don't hit the database until evaluated which means if our action have so many filter then it can not br evaluted before filter finish
 - It waits until the filtration finished
 
+___Let us see when query evaluated___
+
+1. _Iteration_
+    - When we iterate over queryset then the queryset evaluated
+2. _Slicing_
+    - Slicing unevaluated queryset return unevaluted Queryset
+    - But when we slice queryset if we add `step` parameter it return evaluated list of queryset
+    - Slicing evaluated queryset also return list
+
+    _Remember_
+    - Even if Slicing unevaluated queryset return unevaluted Queryset filtering further is not allowed 
 
 
