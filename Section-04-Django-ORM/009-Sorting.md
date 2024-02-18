@@ -12,3 +12,15 @@ ordered_products = Product.objects.order_by('title')
 ```python
 ordered_products = Product.objects.order_by('-title')
 ```
+
+___Sorting in multiple fields___
+
+- We can sort queryset by giving multiple field
+
+_Example_
+
+```python
+products = Product.objects.order_by('unit_price', '-inventory')
+
+# It sort the query set by their unit price then by inventory
+```
