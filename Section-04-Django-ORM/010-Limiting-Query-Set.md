@@ -14,3 +14,4 @@ ___Remember___
 
 - Slicing return queryset but we can not any fileration or any chaining after  slicing
 
+
