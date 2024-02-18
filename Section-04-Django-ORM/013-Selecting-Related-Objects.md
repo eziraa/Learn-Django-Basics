@@ -32,3 +32,13 @@ products = Product.objects.select_related('collection').all()
 - When we use `select_related` method django creates `join` statement between the table to related table
 
 - We can use select_related method when the object has one related object only in the other model
+
+- But when the object is related to many objects of the other model we use `prefetch_related` method
+
+- For example on product may has many promotions so we can use for this `prefetch_related` method
+
+```python
+
+products = Product.objects.prefetch_related('promotions')
+
+```
