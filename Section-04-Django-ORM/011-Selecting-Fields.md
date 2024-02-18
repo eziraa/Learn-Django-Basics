@@ -25,4 +25,19 @@ products = Product.objects.value_list('id', 'description')
 # It will return a banch of tuple that represent product instance
 ```
 
+___Question___
+- Select all producst that have been ordered and sort the by title
+
+___Solution___
+
+```python
+ordered_products_id = OrderItem.objects.values_list('product_id').distinct()
+ordered_products = Product.objects.filter(
+        id__in=ordered_products_id).order_by('title')
+
+```
+
+___Explanation__
+- id__in -> means id found in the tuple of the order_products_id ( look for SQL codde `something IN some range()` )
+- distinct -> to return not repeated result
 
