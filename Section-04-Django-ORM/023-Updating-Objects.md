@@ -29,3 +29,14 @@ collection_product_id = 2
 collection.save()
 ```
 - We will lost `title` for the above object
+
+___Method 2___
+
+- We can fix the above problem by getting object from database rather than creating new one
+
+```python
+collection = Collection.objects.get(pk = 1)
+collection.featured_product_id = 1
+collection.save()
+```
+- This will fix the above problem
