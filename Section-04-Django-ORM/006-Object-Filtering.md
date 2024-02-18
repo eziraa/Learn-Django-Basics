@@ -79,7 +79,9 @@ ___More look ups___
 - _endswith_ -> to check wether the field of the object end with the value_
 
 - _iendswith_ -> This is the same to endswith lookup but it is case insensetive
-
+- _year_ -> To return objects of the year
+- _date_ -> To return objects of the day
+- _range_ -> To return objects between range(espcially for number related)
 
 ___Remember___
 
@@ -126,5 +128,5 @@ ___Let us see when query evaluated___
     - Testing a QuerySet in a boolean context, such as using bool(), or, and or an if statement, will cause the query to be executed.
 7. list
     if we cast queryset to list then the query set evaluated
-    
+
 
