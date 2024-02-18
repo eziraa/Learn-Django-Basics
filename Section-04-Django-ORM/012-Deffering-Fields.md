@@ -12,3 +12,16 @@ products = Product.objects.only('id', 'title')
 ```
 - First it  return an instance with field value id and title then If we try to access 'unit_price' it will query to the database to get the unit price
 - This not optimazation be carefull bacause if your first query contain 1000000 instance then it will query to the database 1000000 times 
+
+___Defer method___
+- We can use other method called `defer` to defer unwanted fields later 
+- Then it exclude fields we deffer
+
+___Example___
+
+```python
+
+products = Product.objects.defer('description')
+
+# It will return a banch of queryset instance with theit fields othet than the description
+```
