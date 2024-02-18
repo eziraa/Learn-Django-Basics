@@ -23,3 +23,23 @@ queryset = cursor.fetchall()
 cursor.close()
 
 ```
+- For any operation the cursor needs to be closed to release its resources
+
+- If there is an exception during execution of the query thr cursor can not be closed
+
+- So to close foy any putput we should use try, finally block
+
+```python
+
+from django.db import connection
+try:
+    cursor = connection.cursor()
+    cursor.execute('SELECT * FROM store_product')
+    queryset = cursor.fetchall()
+except Exception:
+    pass
+finally:
+    cursor.close()
+
+```
+
