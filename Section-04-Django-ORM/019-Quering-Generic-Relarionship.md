@@ -9,4 +9,11 @@
     - ___TaggedItem <---> Article___
     - ___TaggedItem <---> Video___
     - ___TaggedItem <---> News___
-    
+
+- Generic relation ship is done via `ContentType` class because this class has allover control on all models in the project
+
+- So to make quering generic relationship we have to get the three neccessary things
+
+1. _content type_ -> model in the other side
+2. _object id_ -> specific object id  on the model
+3. _content object_ -> the specific object 
