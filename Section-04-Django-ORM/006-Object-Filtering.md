@@ -98,3 +98,10 @@ print(q3)
 - But we are wrong because a queryset hit the database when it is evaluated
 - So it hit the database when it reaches to print method
 
+
+- Querysets are lazy why?
+- There lazy means they don't hit the database until evaluated which means if our action have so many filter then it can not br evaluted before filter finish
+- It waits until the filtration finished
+
+
+
