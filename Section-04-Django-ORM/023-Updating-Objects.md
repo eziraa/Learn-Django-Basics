@@ -40,3 +40,16 @@ collection.featured_product_id = 1
 collection.save()
 ```
 - This will fix the above problem
+
+___Method 3___
+
+- We can also update an object by using `update` method
+
+___Example___
+```python
+
+collection = Collection.objects.update(featured_product = None)
+# This will make all objects featured_product None
+# We have to filter we want to update
+collection = Collection.objects.filter(pk = 1).update(featured_product = None)
+```
