@@ -15,3 +15,14 @@ ___Remember___
 
 - And even if it returns a banch of dictionary object we can chaing other methods
 
+- To return a banch of tuple instead of dictionary  we can use method `value_list` instead of `values`
+
+___Example___
+
+```python
+products = Product.objects.value_list('id', 'description')
+
+# It will return a banch of tuple that represent product instance
+```
+
+
