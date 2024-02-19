@@ -30,3 +30,17 @@ class ProductAdmin(admin.ModelAdmin):
             f'{updated_count} products were updated successfully'
         )
 ```
+
+- We can also specify message type as third parameter of the custom action mesthod by importing `messages` module from django.contrib module
+
+```python
+
+ @admin.action(description='Clear Inventory')
+    def clear_inventory(self, request, queryset: QuerySet):
+        updated_count = queryset.update(inventory=0)
+        self.message_user(
+            request,
+            f'{updated_count} products were updated successfully',
+            messages.SUCCESS
+        )
+```
