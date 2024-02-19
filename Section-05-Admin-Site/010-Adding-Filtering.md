@@ -47,6 +47,18 @@ class InventoryFilter(admin.SimpleListFilter):
 
         return queryset
 ```
+
+___Exaplanation___
+
+- This class should inherit `admin.SimpleListFilter` class
+- Then we have to set two neccessary attributes
+    - _title_ -> Which is to be displayed in the filter page
+    - _Parameter name_ -> an attribute used in filtration url after symbol `?`
+
+- Then we have to implement Two neccessary methods by overiding them in the parent class
+    1. _lookups_ used to contain the filtration list to be diplayed and its condition parameter
+    2. _queryset_ this is used to filter the query set based on the lookup parameter
+    
 - Then add this in to filter_fields list of ProductAdmin as follows
 
 ```python
@@ -64,4 +76,5 @@ class ProductAdmin(admin.ModelAdmin):
         return 'Ok'
 ```
 
+- Let us exaplain
 
