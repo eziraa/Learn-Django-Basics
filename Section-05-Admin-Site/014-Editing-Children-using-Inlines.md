@@ -59,3 +59,23 @@ class OrderAdmin(admin.ModelAdmin):
 
 ___Remember___
  - make sure you have added the title of the autocompleted objects to `search_fields` list in theie model admin class
+
+- we can also specify the number of children to be appeared in the page as follows
+
+```python
+
+
+class OrderItemInline(admin.TabularInline):
+    model = OrderItem
+    autocomplete_fields = ['product']
+    min_num = 1
+    max_num = 10
+    extra = 1
+
+
+@admin.register(Order)
+class OrderAdmin(admin.ModelAdmin):
+    autocomplete_fields = ['customer']
+    inlines = [OrderItemInline]
+    list_display = ['id', 'placed_at', 'customer']
+```
