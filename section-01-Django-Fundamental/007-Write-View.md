@@ -3,9 +3,9 @@
 - View is a function that takes a `request` and return a `reponse`
 - It is a `request` handler
 
-### Let us write a view inside the playgound app
+ ___Let us write a view inside the playgound app___
 
-# In real Project when we write a view we will do the following things
+In real Project when we write a view we will do the following things
 
 - Pull data from database
 - Save data to database

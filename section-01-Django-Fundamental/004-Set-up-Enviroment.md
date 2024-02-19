@@ -14,5 +14,6 @@ Python 3.12.2
 pip install pipenv
 ```
 4. Download install code editor
+    - VS-code Recommended
 
 

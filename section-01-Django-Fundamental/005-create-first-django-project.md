@@ -43,7 +43,8 @@ django-admin startproject onlinestore
 python manage.py runserver
 ```
 
-> if you get this error like stucture like this do not worry about it is not error.It is unpplied migrations (we will back to it leter)
+- if you get this error like stucture like this do not worry about it is not error.
+- It is unpplied migrations (we will back to it leter)
 
 ![Web server](../Images/Web-Server.png)
 
