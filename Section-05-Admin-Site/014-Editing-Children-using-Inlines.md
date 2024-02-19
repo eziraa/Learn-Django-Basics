@@ -42,3 +42,20 @@ class OrderAdmin(admin.ModelAdmin):
 ![edit children also](../Images/adding%20children.png)
 
 
+- Then we can add autocomplete for related objects more simplicity as follows
+
+```python
+class OrderItemInline(admin.TabularInline):
+    model = OrderItem
+    autocomplete_fields = ['product']
+
+
+@admin.register(Order)
+class OrderAdmin(admin.ModelAdmin):
+    autocomplete_fields = ['customer']
+    inlines = [OrderItemInline]
+    list_display = ['id', 'placed_at', 'customer']
+```
+
+___Remember___
+ - make sure you have added the title of the autocompleted objects to `search_fields` list in theie model admin class
