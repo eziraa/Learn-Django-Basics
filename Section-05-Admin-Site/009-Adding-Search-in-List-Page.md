@@ -15,3 +15,13 @@ class CustomerAdmin(admin.ModelAdmin):
 
 - We can add lookup on the field name to make our search meaningfull 
 
+___Let us add lookup on the fields___
+
+```python
+@admin.register(Customer)
+class CustomerAdmin(admin.ModelAdmin):
+    list_display = ['first_name__startswith', 'last_name__startswith', 'membership' ]
+    list_editable = ['membership']
+    search_fields = ['first_name', 'last_name']
+```
+
