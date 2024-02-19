@@ -24,3 +24,12 @@ class ProductAdmin(admin.ModelAdmin):
     execludes = ['title', 'inventory']
 ```
 ![Execluce Python](../Images/execlude.png)
+
+- We can also make a field readonly
+
+```python
+
+@admin.register(Product)
+class ProductAdmin(admin.ModelAdmin):
+    readonly_fields = ['title', 'inventory']
+```
