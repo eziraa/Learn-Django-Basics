@@ -25,3 +25,14 @@ class CustomerAdmin(admin.ModelAdmin):
     search_fields = ['first_name', 'last_name']
 ```
 
+- But the above lookups are case sensetive if we want to make case insensetive we can append `i` before the lookups
+
+___Let use modify it___
+
+```python
+@admin.register(Customer)
+class CustomerAdmin(admin.ModelAdmin):
+    list_display = ['first_name__istartswith', 'last_name__istartswith', 'membership' ]
+    list_editable = ['membership']
+    search_fields = ['first_name', 'last_name']
+```
