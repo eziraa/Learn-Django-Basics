@@ -15,3 +15,12 @@ class ProductAdmin(admin.ModelAdmin):
 - This will display only title and inventory fields
 ![Filtered fields List](../Images/fitlterd.png)
 
+- We can also execlude some fields as follows
+
+```python
+
+@admin.register(Product)
+class ProductAdmin(admin.ModelAdmin):
+    execludes = ['title', 'inventory']
+```
+![Execluce Python](../Images/execlude.png)
