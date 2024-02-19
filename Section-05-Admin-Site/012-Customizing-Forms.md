@@ -1,0 +1,17 @@
+## Customizing Forms
+
+- One of best feature of django is giving builin forms to add new objects of models
+- As follows 
+![Built in Product form](../Images/forms.png)
+
+- We can customize this form by execluding some fields as follows
+
+```python
+
+@admin.register(Product)
+class ProductAdmin(admin.ModelAdmin):
+    fields = ['title', 'inventory']
+```
+- This will display only title and inventory fields
+![Filtered fields List](../Images/fitlterd.png)
+
