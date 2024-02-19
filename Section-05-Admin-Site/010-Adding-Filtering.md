@@ -21,3 +21,47 @@ class ProductAdmin(admin.ModelAdmin):
 - This will make builin filtering lists tob displayed on the right side as follows
 
 ![Filtering Page](../Images/filter.png)
+
+- We can add custom filtering by creating custom filter class which inherits `admin.SimpleFilterClass`
+
+```python
+
+# Creating Custom Inventory filter
+
+
+class InventoryFilter(admin.SimpleListFilter):
+    title = 'inventory'
+    parameter_name = 'inventory'
+
+    def lookups(self, request: Any, model_admin: Any):
+        return [
+            ('<10', 'Low'),
+            ('else', 'Ok'),
+        ]
+
+    def queryset(self, request, queryset):
+        if self.value() == '<10':
+            return queryset.filter(inventory__lt=10)
+        elif self.value() == 'else':
+            return queryset.filter(Q(inventory__gte=10))
+
+        return queryset
+```
+- Then add this in to filter_fields list of ProductAdmin as follows
+
+```python
+
+@admin.register(Product)
+class ProductAdmin(admin.ModelAdmin):
+    list_display = ['title', 'unit_price', 'inventory_status', 'collection']
+    list_editable = ['unit_price']
+    list_per_page = 10
+    list_filter = ['collection', 'last_update', InventroryFilter]
+    ordering = ['inventory']
+    def inventory_status(self, product):
+        if product.inventory < 10:
+            return 'Low'
+        return 'Ok'
+```
+
+
