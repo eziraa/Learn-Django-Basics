@@ -1,11 +1,11 @@
 ## Extending Plugible apps
 
-- Apps in the project have to be self-coctained
-- Means not to be one depened on other
+- Apps in the project have to be self-contained
+- Means not to be one depend on other
 - For example store app is depend on tag app in the what we have seen before
 
-- To make apps zero-ocupling we can use Pluggible app
-- That means we can ceate an other app to relate the two model Tag and product
+- To make apps zero-coupling we can use Plugible app
+- That means we can create an other app to relate the two model Tag and product
 
 - Let us create new app named `store_custom`
 

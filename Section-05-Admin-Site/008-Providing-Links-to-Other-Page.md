@@ -15,12 +15,12 @@ class CollectionAdmin(admin.ModelAdmin):
     def products_count(self, collection):
         return format_html('<a>{}</a>', collection.products_count)
     
-    # This mathod is inheited from ModelAdmin class 
+    # This method is inherited from ModelAdmin class 
     def get_queryset(self, request):
         return super().get_queryset(request).annotate(products_count=Count('product'))
 ```
 
-- Let us modify the above method to return the correct link to navigate to product changr list
+- Let us modify the above method to return the correct link to navigate to product changelist
 
 - By importing `reverse` method from `django.urls` module
 

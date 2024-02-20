@@ -1,7 +1,7 @@
 ## Transactions
 
 - All transactions needs to be executed in atomic way
-- Meaning to be excecuted all together if one of the transaction failed rallback all
+- Meaning to be executed all together if one of the transaction failed rollback all
 
 ___Example___
 ```python
@@ -23,7 +23,7 @@ item.save()
 
 - To solve this we use `Transaction`
 - If if we make those two operation in one transaction then all of them executed only there is no error on any of them 
-- If any arror happened on any of them the operation will be rolled back
+- If any error happened on any of them the operation will be rolled back
 
 ___Let us update the above code by making it under atomic function decorator
 

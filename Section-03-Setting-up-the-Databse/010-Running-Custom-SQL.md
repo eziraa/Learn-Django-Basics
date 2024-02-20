@@ -53,12 +53,12 @@ class Migration(migrations.Migration):
 - _Then migrate it_
 - _it will insert new data into collection model_
 - _The first parameter is to insert some value to the database table_ 
-- _The second paramter is to reverse the operation when make the migration unapplied_
+- _The second parameter is to reverse the operation when make the migration unapplied_
 
 ___Remember___
-- _If want to revert the migration leter then you have to give both argument_ 
+- _If want to revert the migration later then you have to give both argument_ 
 
-- The following are valid sql code writng
+- The following are valid sql code writing
 
 ```python
 operations = [

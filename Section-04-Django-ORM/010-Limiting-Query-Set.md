@@ -12,6 +12,6 @@ products = Product.objects.order_by('title')[:5]
 
 ___Remember___
 
-- Slicing return queryset but we can not any fileration or any chaining after  slicing
+- Slicing return queryset but we can not any filtration or any chaining after  slicing
 
 

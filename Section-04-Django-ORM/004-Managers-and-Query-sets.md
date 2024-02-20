@@ -1,9 +1,9 @@
 ## Managers and Querysets
 
-- Every model has manger it return an API for interaction between the model class and the databas
+- Every model has manger it return an API for interaction between the model class and the database
 - Through this API you can 
     -  _Get data_
-    - _Filter dara_
+    - _Filter data_
     - _Group data_
     - _Sort data_
 
@@ -12,7 +12,7 @@
 
 ___QuerySet___
 
-- Query Set is an object returned by the API when we make the above opreration
+- Query Set is an object returned by the API when we make the above operation
 - Let us update say_hello function of views module in playground app
 - Change its name to index and try to get all products from the database through product manager
 
@@ -25,7 +25,7 @@ def index(request):
     querySet = Product.objects.all()
     return render(request, 'index.html', {'name': 'Ezira'})
 ```
-- Variable querSet store a set of query retrived from the database table 
+- Variable querySet store a set of query retrieved from the database table 
 
 - Let us send the query set to the template file as context
 - To send let us cast to list for simplicity
@@ -70,8 +70,8 @@ to display list of product objects
 
 ### Explaining the above code
 
-- This is simple html file rathe than there are some additional things which is empedding python code in html file
-- if you want to emped expression use the following command
+- This is simple html file rathe than there are some additional things which is embedding python code in html file
+- if you want to embed expression use the following command
 
 ```html
 {{ expression }}
@@ -83,7 +83,7 @@ _Example_
 ```html
 {{name}}
 ```
-- if you want to emped conditional statment like for loop or if use the following and close it
+- if you want to embed conditional statement like for loop or if use the following and close it
 - To close for loop use endfor
 - To close if use endif
 
@@ -106,9 +106,9 @@ _Example_
 
 - if you run your server and navigate to url (127.0.0.1:8000/playground) you will get as follows
 
-![empedding](../Images/embed.png)
+![embedding](../Images/embed.png)
 
-- As we see in the picture it is simply list of product object so we have to use its attribute rather display product object for readbility
+- As we see in the picture it is simply list of product object so we have to use its attribute rather display product object for readability
 
 - Modify the content of the for loop in the template as follows
 
@@ -118,4 +118,4 @@ _Example_
 
 - Then you will get as follows
 
-![Corredcted embed](../Images/correctd%20emped.png)
+![Corrected embed](../Images/correctd%20emped.png)

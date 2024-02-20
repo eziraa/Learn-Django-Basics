@@ -1,4 +1,4 @@
-## One to One realtionship 
+## One to One relationship 
 - Create Address model  in the model module of store app
 
 ```Python
@@ -7,12 +7,12 @@ class Order(models.Model):
     city = models.CharField(max_length = 255)
 ```
 
-- This is noraml model
+- This is normal model
 
 - How to implement one to one relationship between the address model to Customer model
 - In this relation ship there are to things `parent`
 and `child` 
-- `Parent` should be difined before `child`
+- `Parent` should be defined before `child`
 - In this relation the parent is `Customer` model
 and child is `Address` model
 
@@ -31,7 +31,7 @@ class Address(models.Model):
 ```
 
 - When we create the relationship  we pass to argument
-    - 1st argument is to indicate the paretn class
+    - 1st argument is to indicate the parent class
     - 2nd argument is `on_delete` specify what should going on the child model when the parent model deleted
         - `on_delete` has the following value
 

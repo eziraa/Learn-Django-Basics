@@ -38,7 +38,7 @@ class Customer(models.Model):
     MEMBERSHIP_BRONZE = 'B'
     MEMBERSHIP_SILVER = 'S'
     MEMBERSHIP_GOLD = 'G'
-    MEMBESHIP_CHOICES = [
+    MEMBERSHIP_CHOICES = [
         (MEMBERSHIP_BRONZE, 'Bronze')
         (MEMBERSHIP_SILVER, 'Silver')
         (MEMBERSHIP_GOLD, 'Gold')
@@ -49,7 +49,7 @@ class Customer(models.Model):
     phone_number = models.CharField(max_length=255)
     birth_date = models.DateField(null=True)
     membership = models.CharField(
-        max_length=1, choices=MEMBESHIP_CHOICES, default=MEMBERSHIP_BRONZE)
+        max_length=1, choices=MEMBERSHIP_CHOICES, default=MEMBERSHIP_BRONZE)
     address = models.ForeignKey(Address, on_delete=models.SET_NULL, null=True)
 
 # Create Order Class
@@ -65,7 +65,7 @@ class Order(models.Model):
     ]
 
     placed_at = models.DateTimeField(auto_now_add=True)
-    pyment_status = models.CharField(
+    payment_status = models.CharField(
         max_length=1, choices=PAYMENT_STATUS_CHOICES, default=PAYMENT_STATUS_PENDING)
     customer = models.ForeignKey(Customer, on_delete=models.PROTECT)
 

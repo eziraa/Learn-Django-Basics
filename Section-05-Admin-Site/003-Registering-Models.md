@@ -15,7 +15,7 @@ admin.site.register(list_of_models)
 - `register` method can take single model or iterable
 
 - We will see the following
-![registred models](../Images/registered%20models.png)
+![registered models](../Images/registered%20models.png)
 
 - Let us look up Product model by click on it
 
@@ -25,7 +25,7 @@ admin.site.register(list_of_models)
 
 - We can change str representation of the model to make it more expressible
 
-- Let us change it in its orginal model class
+- Let us change it in its original model class
 
 ```python
 class Product(models.Model):
@@ -45,9 +45,9 @@ class Product(models.Model):
 
 ___Exercise___
 
-- Change string representation of all registed models
+- Change string representation of all registered models
 
-- By Default objects are stored and retrived in the order of they have been created
+- By Default objects are stored and retrieved in the order of they have been created
 
 - But we can this ordering by adding `Meta` class inside it 
 

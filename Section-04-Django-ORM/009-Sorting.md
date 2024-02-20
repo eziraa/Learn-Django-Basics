@@ -1,7 +1,7 @@
 ## Sorting
 
-- We can sort our queryset by unsing order_by methd as follows 
-- It can sort ascendingly by default
+- We can sort our queryset by using order_by method as follows 
+- It can sort ascending by default
 
 ```python
 ordered_products = Product.objects.order_by('title')
@@ -32,8 +32,8 @@ reversed_products = Product.objects.order_by('title').reverse()
 
 # it will return reversed order of products
 ```
-- Order by metho return a query set so  we can chain  others method on it
-- for example how to get the first product after ordered by thier title
+- Order by method return a query set so  we can chain  others method on it
+- for example how to get the first product after ordered by their title
 
 ```python
 product = Product.objects.order_by('title')[0]
@@ -42,7 +42,7 @@ product = Product.objects.order_by('title')[0]
 
 ```
 
-- And we can also use `earliest` method insteed of slicing and order by
+- And we can also use `earliest` method instead of slicing and order by
 
 ```python
 product = Product.objects.earliest('title')

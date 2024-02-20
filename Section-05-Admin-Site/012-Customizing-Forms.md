@@ -1,10 +1,10 @@
 ## Customizing Forms
 
-- One of best feature of django is giving builin forms to add new objects of models
+- One of best feature of django is giving builtin forms to add new objects of models
 - As follows 
 ![Built in Product form](../Images/forms.png)
 
-- We can customize this form by execluding some fields as follows
+- We can customize this form by excluding some fields as follows
 
 ```python
 
@@ -15,15 +15,15 @@ class ProductAdmin(admin.ModelAdmin):
 - This will display only title and inventory fields
 ![Filtered fields List](../Images/fitlterd.png)
 
-- We can also execlude some fields as follows
+- We can also exclude some fields as follows
 
 ```python
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
-    execludes = ['title', 'inventory']
+    excludes = ['title', 'inventory']
 ```
-![Execluce Python](../Images/execlude.png)
+![Exclude Python](../Images/execlude.png)
 
 - We can also make a field readonly
 
@@ -34,9 +34,9 @@ class ProductAdmin(admin.ModelAdmin):
     readonly_fields = ['title', 'inventory']
 ```
 
-- Converting dropdown list to autocemplete
+- Converting dropdown list to autocomplete
 
-- Drop down list of so many objects is bad for optimazation so we should convert it to autp completed
+- Drop down list of so many objects is bad for optimization so we should convert it to auto completed
 
 ___Example___
 - We can convert as drop down list (collection) in product as follows
@@ -60,11 +60,11 @@ class Collection(models.Model):
 
 ```python
 class CollectionAdmin(admin.ModelAdmin):
-    # othe code here
+    # other code here
     search_fields = ['title']
 ```
 
-- Then adding colledction to autocomplete_fields list
+- Then adding collection to autocomplete_fields list
 
 ```python
 

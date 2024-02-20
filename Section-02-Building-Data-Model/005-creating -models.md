@@ -15,9 +15,9 @@ ___Explanation___
 
 - First we have to import `models` module from `django.db` module
 - Then create a class called `Product` which inherits  `model.Model` model(class)
-- Add neccessary attributes by specifing their Field type 
+- Add necessary attributes by specifying their Field type 
 - For example as we see in the above the `title`  field has field type of `ChatField`
-- There are many field types you can see in django decumentation
+- There are many field types you can see in django documentation
 
 __Example__
     
@@ -44,18 +44,18 @@ ___Let me explain the parameter of the field types___
 
 1. _CharField_
     
-    - It has complusory parameter `max_length` to limit nomber of charchters
+    - It has compulsory parameter `max_length` to limit number of characters
 2. _DecimalField_
     
-    - It has to complusory parameters `max_digits` and `decimal_places`
+    - It has to compulsory parameters `max_digits` and `decimal_places`
         - `max_digits` -> To indicate maximum number of digits in the decimal found 
             
             ___example___
                 
                 - max_digits = 4 means 345.6 or 52.56 or 2.948
-        - `deciaml_places` -> to limit deciaml places
+        - `decimal_places` -> to limit decimal places
 
-            ___exampl___
+            ___example___
 
                 - decimal_places = 2 means 234.45 or 34525.57 or 454095.00
 3. _DateTimeField_
@@ -79,7 +79,7 @@ _Let me explain some parameters in the above models_
     - `unique` = `True` the field should be unique no two or more instance of the model to have the field value (means the same email in our current condition)
     - `null` = `True` the field can be null so we can (not providing value to this field)
 
-- When create model in djnago we don't have to create `id` for our models django add to the model when we create the model
+- When create model in django we don't have to create `id` for our models django add to the model when we create the model
 - And it make it primary key 
 - But we can also set our primary key manually when we create the model 
 
@@ -90,6 +90,6 @@ class Customer(models.Model):
     first_name = models.CharField(max_length =255)
     last_name = models.CharField(max_length = 255)
     email = models.EmailField(unique = True, primary_key = True)
-    phone_number = models.Charfield(max_length)
+    phone_number = models.CharField(max_length)
     birth_date = models.DateField(null = True)
 ```

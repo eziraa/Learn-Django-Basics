@@ -1,6 +1,6 @@
 ## Adding Custom Action
 
-- By defaut the admin site has delete action but we can add other action
+- By default the admin site has delete action but we can add other action
 - Let us add an action which clear inventory
 - To add first add custom action method to clear inventory in the ProductAdmin class
 Than add this method in the list of action in ProductAdmin class
@@ -31,7 +31,7 @@ class ProductAdmin(admin.ModelAdmin):
         )
 ```
 
-- We can also specify message type as third parameter of the custom action mesthod by importing `messages` module from django.contrib module
+- We can also specify message type as third parameter of the custom action method by importing `messages` module from django.contrib module
 
 ```python
 

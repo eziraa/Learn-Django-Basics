@@ -1,13 +1,13 @@
 ## Editing Children using inlines
 
-- We can edit children by usiing inline
+- We can edit children by using inline
 - First create inlined children class then add this class to the `inlines` list of the parent class
 
 - If we want to add new order then we get the following page.
 
 ![Order  page](../Images/order%20page.png)
 
-- But what if we want to add order item obejcs also 
+- But what if we want to add order item objects also 
 - Solution is use inlined class
 ___Example___
 
@@ -58,7 +58,7 @@ class OrderAdmin(admin.ModelAdmin):
 ```
 
 ___Remember___
- - make sure you have added the title of the autocompleted objects to `search_fields` list in theie model admin class
+ - make sure you have added the title of the autocompleted objects to `search_fields` list in their model admin class
 
 - we can also specify the number of children to be appeared in the page as follows
 

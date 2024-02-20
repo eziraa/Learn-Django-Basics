@@ -1,6 +1,6 @@
 ## Computed Column
 
-- We can add cumputed column by creating new method that compute some result 
+- We can add computed column by creating new method that compute some result 
 
 ___Example__
 

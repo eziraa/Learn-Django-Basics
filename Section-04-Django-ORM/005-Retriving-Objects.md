@@ -1,15 +1,15 @@
-## Retriving Objects
+## Retrieving Objects
 
-- To retrive objects from database we can use the following methods
+- To retrieve objects from database we can use the following methods
 
 ___Example___
-- To retrive all objects of the model use `all` method
+- To retrieve all objects of the model use `all` method
 
 
 ```python
 productQuerySet = Product.objects.all()
 ```
-- To retrive an object you can use `get`method
+- To retrieve an object you can use `get`method
 - When we use `get` it return the actual object not query set
 
 ```python
@@ -44,7 +44,7 @@ def index(request):
         'products': list([product])})
 ```
 
-- But if you do not want to write `try`  block you can use `filter` mothed plus `first` method
+- But if you do not want to write `try`  block you can use `filter` method plus `first` method
 
 - filter method return queryset by filtering objects by based on giving condition and first method return the first object from the query set
 
@@ -58,9 +58,9 @@ def index(request):
          'products': list([product])})
 
 ```
-- if there is no object to be retruned it will return `None` rather raising exception
+- if there is no object to be returned it will return `None` rather raising exception
 
-- We can also check weather it found or not by usnig `exsts` method instead of `first` method
+- We can also check weather it found or not by using `exists` method instead of `first` method
 
 - Let us modify it as follows
 ```python

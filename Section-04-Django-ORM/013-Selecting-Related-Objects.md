@@ -27,7 +27,7 @@ ___Example___
 ```python
 products = Product.objects.select_related('collection').all()
 ```
-- It will load related table Collection also this will prevent the extra quering
+- It will load related table Collection also this will prevent the extra querying
 
 - When we use `select_related` method django creates `join` statement between the table to related table
 

@@ -18,7 +18,7 @@ class ProductAdmin(admin.ModelAdmin):
             return 'Low'
         return 'Ok'
 ```
-- This will make builin filtering lists tob displayed on the right side as follows
+- This will make builtin filtering lists tob displayed on the right side as follows
 
 ![Filtering Page](../Images/filter.png)
 
@@ -48,15 +48,15 @@ class InventoryFilter(admin.SimpleListFilter):
         return queryset
 ```
 
-___Exaplanation___
+___Explanation___
 
 - This class should inherit `admin.SimpleListFilter` class
-- Then we have to set two neccessary attributes
+- Then we have to set two necessary attributes
     - _title_ -> Which is to be displayed in the filter page
     - _Parameter name_ -> an attribute used in filtration url after symbol `?`
 
-- Then we have to implement Two neccessary methods by overiding them in the parent class
-    1. _lookups_ used to contain the filtration list to be diplayed and its condition parameter
+- Then we have to implement Two necessary methods by overriding them in the parent class
+    1. _lookups_ used to contain the filtration list to be displayed and its condition parameter
     2. _queryset_ this is used to filter the query set based on the lookup parameter
     
 - Then add this in to filter_fields list of ProductAdmin as follows
@@ -68,7 +68,7 @@ class ProductAdmin(admin.ModelAdmin):
     list_display = ['title', 'unit_price', 'inventory_status', 'collection']
     list_editable = ['unit_price']
     list_per_page = 10
-    list_filter = ['collection', 'last_update', InventroryFilter]
+    list_filter = ['collection', 'last_update', InventoryFilter]
     ordering = ['inventory']
     def inventory_status(self, product):
         if product.inventory < 10:
@@ -76,5 +76,5 @@ class ProductAdmin(admin.ModelAdmin):
         return 'Ok'
 ```
 
-- Let us exaplain
+
 

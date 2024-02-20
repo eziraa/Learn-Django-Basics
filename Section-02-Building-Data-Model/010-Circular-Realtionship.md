@@ -1,6 +1,6 @@
 ## Circular Relationship
 
-- Circular Relationship mean when two medels depend on each other
+- Circular Relationship mean when two models depend on each other
 
 ___Example___
 
@@ -13,7 +13,7 @@ class Collection(models.Model):
 
 - This code raise an error because two models are depend one each other during making reverse relationship
 
-- We can solve this as follows by make the related_name ther charachter and the related model name normal string
+- We can solve this as follows by make the related_name their character and the related model name normal string
 
 ```python
 class Collection(models.Model):

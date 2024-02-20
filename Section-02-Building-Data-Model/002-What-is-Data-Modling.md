@@ -1,7 +1,7 @@
 ## Data modeling
 
 - Model Represent the Database Table
-- For exmaple for our E-commerse app we will have the following models
+- For example for our E-commerce app we will have the following models
     1. _Product_
     2. _Collection_
     3. _Customer_
@@ -43,11 +43,11 @@ ___There are three types of model relation ship___
 
         __Example__
 
-            A collection will contain different products and a product will be in many defferent collections
+            A collection will contain different products and a product will be in many different collections
 
 - Models will have different Attributes
 
-__Exmaple__
+__Example__
     
     Product Model Will have the following attributes
     - title

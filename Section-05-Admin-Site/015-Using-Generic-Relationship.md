@@ -1,6 +1,6 @@
 ## Using Generic Relationship
 
-- As we  have seen before generic relationship when relation it between two apps model and to make the apps not depened eachother made the relationship generic 
+- As we  have seen before generic relationship when relation it between two apps model and to make the apps not depend each other made the relationship generic 
 
 - So how to manage children in generic relationship
 
@@ -26,14 +26,14 @@ class ProductAdmin(admin.ModelAdmin):
     inlines = [TaggedInline]
 ```
 
-- after this time we can add tags wheh we create new product
+- after this time we can add tags when we create new product
 
-- We can also add convert the dropdown list of tags to `auto_completd_fields`
+- We can also add convert the dropdown list of tags to `auto_completed_fields`
 
 
 ```python
 class TagInline(GenericTabularInline):
-    auto_completd_fields = ['tag']
+    auto_completed_fields = ['tag']
     model = TaggedItem
 
 ```

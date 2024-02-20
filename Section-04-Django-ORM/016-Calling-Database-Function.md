@@ -1,8 +1,8 @@
 ## Calling Database Function
 
-- We can call database by using `Func` class and passing its argumment and the function we call
+- We can call database by using `Func` class and passing its argument and the function we call
 
-- Calling function `CONCAT` to create fullname from first name and last name
+- Calling function `CONCAT` to create full_name from first name and last name
 
 ```python
 from django.db.models import Func
@@ -21,4 +21,4 @@ customers = Customer.objects.annotate(full_name = Concat('first_name',Value(' ')
 
 - This will also add additional field called full_name it does not require any wrapping of its string parameter
 - This is the best one
-- We have wrapped the gap with `Value` to prevent djnago finding a column name with named space(some thing unfamiliar named space 🤣🤣🤣)
+- We have wrapped the gap with `Value` to prevent django finding a column name with named space(some thing unfamiliar named space 🤣🤣🤣)

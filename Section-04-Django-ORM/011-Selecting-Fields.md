@@ -11,22 +11,22 @@ products = Product.objects.value('id', 'description')
 ```
 ___Remember___
 
--This will return a banch of dictionary objects rather than banch of queryset instances
+-This will return a bunch of dictionary objects rather than bunch of queryset instances
 
-- And even if it returns a banch of dictionary object we can chaing other methods
+- And even if it returns a bunch of dictionary object we can chaining other methods
 
-- To return a banch of tuple instead of dictionary  we can use method `value_list` instead of `values`
+- To return a bunch of tuple instead of dictionary  we can use method `value_list` instead of `values`
 
 ___Example___
 
 ```python
 products = Product.objects.value_list('id', 'description')
 
-# It will return a banch of tuple that represent product instance
+# It will return a bunch of tuple that represent product instance
 ```
 
 ___Question___
-- Select all producst that have been ordered and sort the by title
+- Select all product that have been ordered and sort the by title
 
 ___Solution___
 
@@ -38,6 +38,6 @@ ordered_products = Product.objects.filter(
 ```
 
 ___Explanation__
-- id__in -> means id found in the tuple of the order_products_id ( look for SQL codde `something IN some range()` )
+- id__in -> means id found in the tuple of the order_products_id ( look for SQL code `something IN some range()` )
 - distinct -> to return not repeated result
 

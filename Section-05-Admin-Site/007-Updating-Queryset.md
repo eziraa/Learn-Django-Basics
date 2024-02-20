@@ -6,7 +6,7 @@
     - ___Group___
     - ___Sort___
 
-___Let us add producta_count column on collection list page___
+___Let us add products_count column on collection list page___
 
 ```python
 
@@ -20,7 +20,7 @@ class CollectionAdmin(admin.ModelAdmin):
 
 - We can add computed column called `products_count` by defining  function by the name of computed column
 
-- But there is a problem there is no `products_count` field in collection model so we have to annotate this column name by customzing the queryset
+- But there is a problem there is no `products_count` field in collection model so we have to annotate this column name by customizing the queryset
 
 - _Let us customize `get_queryset` method_
 
@@ -35,7 +35,7 @@ class CollectionAdmin(admin.ModelAdmin):
     def products_count(self, collection):
         return collection.products_count
     
-    # This mathod is inheited from ModelAdmin class 
+    # This mathod is inherited from ModelAdmin class 
     def get_queryset(self, request):
         return super().get_queryset(request).annotate(products_count=Count('product'))
 ```

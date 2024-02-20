@@ -8,11 +8,11 @@
 python manage.py createsuperuser 
 ```
 - Then it will ask username, email and password 
-- Fill those cerrectly adn don't forget
+- Fill those correctly adn don't forget
 
 ![Admin creation](../Images/admin.png)
 
-- Then after seccefully created admin you can login to (127.0.0.1/admin)
+- Then after successfully created admin you can login to (127.0.0.1/admin)
 - Enter you admin's username and password of what you created
 
 - You will get the following page

@@ -13,7 +13,7 @@ class CustomerAdmin(admin.ModelAdmin):
 - This will add search field on the top of the list page 
 - But if we want to search and enter some text then it will check weather the first_name or last_name contain that text of it contain it will display the customer
 
-- We can add lookup on the field name to make our search meaningfull 
+- We can add lookup on the field name to make our search meaningful 
 
 ___Let us add lookup on the fields___
 
@@ -25,7 +25,7 @@ class CustomerAdmin(admin.ModelAdmin):
     search_fields = ['first_name', 'last_name']
 ```
 
-- But the above lookups are case sensetive if we want to make case insensetive we can append `i` before the lookups
+- But the above lookups are case sensitive if we want to make case insensitive we can append `i` before the lookups
 
 ___Let use modify it___
 

@@ -2,7 +2,7 @@
 
 - Migrations contain a set change on the model
 - It is like commit in version control system
-- Remember our model is still not reflectd in database
+- Remember our model is still not reflected in database
 - So to reflect those changes we use the following command
 
 ```bash

@@ -27,7 +27,7 @@ cursor.close()
 
 - If there is an exception during execution of the query thr cursor can not be closed
 
-- So to close foy any putput we should use try, finally block
+- So to close foy any output we should use try, finally block
 
 ```python
 

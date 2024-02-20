@@ -10,7 +10,7 @@ ___Example___
 python manage.py migrate store 0002
 ```
 
-___Remeber___
+___Remember___
 
 - But the migration did not be deleted rather unapplied
 

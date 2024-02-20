@@ -2,7 +2,7 @@
 
 - We can group data based on the their relationship to other table
 - For example We can find number of orders ordered by one customer to find those we can use grouping
-- To gouping we use Count `class`
+- To grouping we use Count `class`
 
 ```python
 from django.db.models.functions import Count

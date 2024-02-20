@@ -5,12 +5,12 @@
 
 ___Let us add membership attribute to customer class but its value is among(Bronze, Silver, Gold)___
 - This can be done using choices parameter
-- The paramter takes value = `list of tuple`
+- The parameter takes value = `list of tuple`
 
 ```Python
 class Customer(models.Model):
 
-    MEMBESHIP_CHOICES = [
+    MEMBERSHIP_CHOICES = [
         ('B', 'Bronze')
         ('S', 'Silver')
         ('G', 'Gold')
@@ -18,9 +18,9 @@ class Customer(models.Model):
     first_name = models.CharField(max_length =255)
     last_name = models.CharField(max_length = 255)
     email = models.EmailField(unique = True, primary_key = True)
-    phone_number = models.Charfield(max_length = 255)
+    phone_number = models.CharField(max_length = 255)
     birth_date = models.DateField(null = True)
-    membership = models.CharField(max_length = 1, choices = MEMBESHIP_CHOICES)
+    membership = models.CharField(max_length = 1, choices = MEMBERSHIP_CHOICES)
 ```
 
 ___Let us to reduce error if we update this late we can add the membership choices as follows___
@@ -31,7 +31,7 @@ class Customer(models.Model):
     MEMBERSHIP_BRONZE = 'B'
     MEMBERSHIP_SILVER = 'S'
     MEMBERSHIP_GOLD = 'G'
-    MEMBESHIP_CHOICES = [
+    MEMBERSHIP_CHOICES = [
         (MEMBERSHIP_BRONZE, 'Bronze')
         (MEMBERSHIP_SILVER, 'Silver')
         (MEMBERSHIP_GOLD, 'Gold')
@@ -39,12 +39,12 @@ class Customer(models.Model):
     first_name = models.CharField(max_length =255)
     last_name = models.CharField(max_length = 255)
     email = models.EmailField(unique = True, primary_key = True)
-    phone_number = models.Charfield(max_length = 255)
+    phone_number = models.CharField(max_length = 255)
     birth_date = models.DateField(null = True)
-    membership = models.CharField(max_length = 1, choices = MEMBESHIP_CHOICES, default = MEMBERSHIP_BRONZE)
+    membership = models.CharField(max_length = 1, choices = MEMBERSHIP_CHOICES, default = MEMBERSHIP_BRONZE)
 ```
 
-___Let us create other model called Order with attribute placed_at (auto_populated) and pyment_status(pending , complete, failed)___
+___Let us create other model called Order with attribute placed_at (auto_populated) and payment_status(pending , complete, failed)___
 
 ```python
 
@@ -53,7 +53,7 @@ class Order (models.Model):
     PAYMENT_PENDING = 'P'
     PAYMENT_FAILED = 'F'
     PAYMENT_CHOICES = [
-        (PAYMENT_COMPLETE , 'Cmplteted'),
+        (PAYMENT_COMPLETE , 'Completed'),
         (PAYMENT_PENDING, 'Pending'),
         (PAYMENT_FAILED, 'Failed')
     ]

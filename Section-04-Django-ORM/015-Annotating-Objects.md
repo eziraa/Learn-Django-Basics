@@ -1,7 +1,7 @@
 ## Annotating Objects
 
 - Annotating means adding additional field name to the result of query set
-- We can do this by unsing annotate method
+- We can do this by using annotate method
 
 ___Example___
 
@@ -14,7 +14,7 @@ products = Product.objects.annotate(is_new = True)
 - So the field value can not be simple boolean value or str or number
 - So what is Expression class
 - Expression class contain the following child class
-    - _Value_ -> for simple boolean or str or numbr value
+    - _Value_ -> for simple boolean or str or number value
     - _F_ -> for field of the model
     - _Func_ -> to call database function
     - Aggregate -> for Sum, Count, Min, Max, Avg

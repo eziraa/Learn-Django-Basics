@@ -15,7 +15,7 @@ class ProductAdmin(admin.ModelAdmin):
         return 'Ok'
 ```
 
-- We can also add field name rather than the table name as follows if we want seleted field
+- We can also add field name rather than the table name as follows if we want selected field
 
 ```python
 

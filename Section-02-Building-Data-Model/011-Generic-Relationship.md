@@ -1,7 +1,7 @@
 ## Generic relationship
 
-- Generic relationshipp used to solve there are model depedency between two different apps 
-- Bacause we create apps in a project the apps should be less coupling(ecternal) with high cohesion(internal)
+- Generic relationship used to solve there are model dependency between two different apps 
+- Because we create apps in a project the apps should be less coupling(external) with high cohesion(internal)
 
 ___Example___
 
@@ -33,17 +33,17 @@ class Tag(models.Model):
     label = models.CharField(max_length=255)
 
 
-# create TeggedItem model for the genric relationship
+# create TaggedItem model for the generic relationship
 
 
-class TaggeItem(models.Model):
+class TaggedItem(models.Model):
     tag = models.ForeignKey(Tag, on_delete=models.CASCADE)
     content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE)
     object_id = models.PositiveSmallIntegerField()
     content_object = GenericForeignKey()
 ```
 
-___Let us add othe generic relationship for what user likes what object___
+___Let us add other generic relationship for what user likes what object___
 
 - To add this relationship first create `likes` app
 
@@ -51,7 +51,7 @@ ___Let us add othe generic relationship for what user likes what object___
 python manage.py startapp likes
 ```
 
-- Then import built in `User` model and make the realionship through LikedItem model
+- Then import built in `User` model and make the relationship through LikedItem model
 
 ```python
 from django.contrib.auth.models import User

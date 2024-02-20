@@ -4,10 +4,10 @@
 
 ___Example___
 
- In our E-commerse project
+ In our E-Commerce project
 1. Order - Product
-    one order will containe different Products
-    one product will inlcuded in different orders
+    one order will contain different Products
+    one product will included in different orders
 
 - To implement it we need Association class because the relation create additional attribute called quantity
 - So we have to create OrderItem Association class
@@ -46,11 +46,11 @@ class CartItem(models.Model):
 
 - There a true many-to-many relationship
 
-___Exmple___
+___Example___
 
     - this is between Product and Promotion models
-    - A product will have diffent promotion and
-    - A promotion will include defferent products
+    - A product will have different promotion and
+    - A promotion will include different products
 ___Let us implement it___
 
 - First create Promotion model
@@ -73,7 +73,7 @@ class Promotion(models.Model):
     products = models.ManyToManyField(Product, related_name='promotions')
 ```
 
-- After we create this relationship django create the reverse relationship and it will create a field called `promotions` which we gave in the paramater called `related_name`  in the above relation
+- After we create this relationship django create the reverse relationship and it will create a field called `promotions` which we gave in the parameter called `related_name`  in the above relation
 
 - But if we did not give  related name then it automatically create field named `product_set`
 - Then we can access promotions for particular product like (product.promotions or product.promotion_set)

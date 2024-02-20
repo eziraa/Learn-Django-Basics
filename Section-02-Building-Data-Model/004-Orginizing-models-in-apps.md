@@ -5,7 +5,7 @@
 - They work in philosophy of `work one thing do it well`
 - When we break down projects into multiple apps 
     - the apps should be
-        1. Self-contianed
+        1. Self-contained
         2. Zero-Coupling
         3. High-Cohesion(focus)
 - Let us create two other apps for our project
